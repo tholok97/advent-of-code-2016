@@ -6,17 +6,21 @@ CC=g++
 CFLAGS= -w -std=c++14 -fpermissive
 INCLUDE= -Iinclude/
 
-DAYCPPS=$(sort $(wildcard src/aoc*.cpp))
-DAYEXES=$(patsubst src/aoc%.cpp,bin/aoc%.out,$(DAYCPPS))
-DAYNUMS=$(patsubst src/aoc%.cpp,%,$(DAYCPPS))
+DAYCPPS=$(sort $(wildcard src/day*.cpp))
+DAYEXES=$(patsubst src/day%.cpp,bin/day%.out,$(DAYCPPS))
+DAYNUMS=$(patsubst src/day%.cpp,%,$(DAYCPPS))
+
+$(info $(DAYCPPS))
+$(info $(DAYEXES))
+$(info $(DAYNUMS))
 
 all: $(DAYEXES)
 
-%: bin/aoc%.out
+%: bin/%.out
 	$(info ############################################## RUNNING $<)
 	$<
 
-bin/aoc%.out: src/aoc%.cpp
+bin/day%.out: src/day%.cpp
 	$(info ############################################## BUILDING $@)
 	$(CC) $(CFLAGS) $(INCLUDE) $(wildcard $<) -o $@
 
