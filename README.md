@@ -1,3 +1,7 @@
+**NOTE**: *I have solved all the tasks, but am in the process of getting them up to the standard of my [Advent of Code 2017 solution](https://github.com/tholok97/advent-of-code-2017). Building and running might sometimes be a pain, and some of tasks lack comments.*
+
+---
+
 # My solutions to [Advent of Code 2016](http://adventofcode.com/2016)
 
 ## How to build
